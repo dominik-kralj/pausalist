@@ -1,17 +1,16 @@
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-    title: 'Croatian Pausalist App',
-}
+import { inter } from './assets/fonts/font'
+import { Providers } from './providers'
 
 export default function RootLayout({
     children,
-}: Readonly<{
+}: {
     children: React.ReactNode
-}>) {
+}) {
     return (
-        <html lang="en">
-            <body>{children}</body>
+        <html lang="en" className={inter.variable}>
+            <body>
+                <Providers>{children}</Providers>
+            </body>
         </html>
     )
 }
