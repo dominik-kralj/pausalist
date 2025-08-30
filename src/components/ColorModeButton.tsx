@@ -11,6 +11,11 @@ function ColorModeButton() {
             onClick={toggleColorMode}
             variant="ghost"
             size="sm"
+            color="text.secondary"
+            _hover={{
+                color: 'text.primary',
+                bg: 'interactive.hover',
+            }}
         />
     )
 }
